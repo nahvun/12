@@ -21,7 +21,7 @@ void bingo_init(void){
 	int maxNum = N_SIZE*N_SIZE;
 	
 	for(i=0;i<N_SIZE*N_SIZE;i++){
-		numberStatus[i] = -1;
+		numberStatus[i] = BINGO_NUMSTATUS_ABSENT;
 	}
 	
 	for (i=0;i<N_SIZE;i++){
@@ -29,7 +29,7 @@ void bingo_init(void){
 			randNum = rand()%maxNum;
 			
 			for(k=0;k<N_SIZE*N_SIZE;k++){
-				if (numberStatus[k] == -1){
+				if (numberStatus[k] == BINGO_NUMSTATUS_ABSENT){
 					if (randNum == 0)
 						break;
 					else

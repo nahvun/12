@@ -8,7 +8,6 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-static int selNum = 0;
 
 int check_gameEnd(void){
 	
@@ -20,6 +19,8 @@ int check_gameEnd(void){
 	
 }
 int get_number(void){
+	
+	int selNum = 0;
 	
 	do{
 		printf("select a number: ");
@@ -39,6 +40,8 @@ int get_number(void){
 
 
 int main(int argc, char *argv[]) {
+	
+	int selNum;
 	
 	srand((unsigned) time(NULL));
 	
